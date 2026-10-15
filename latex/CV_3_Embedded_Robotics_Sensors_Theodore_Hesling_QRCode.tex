@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=18mm,
+  right=18mm,
+  top=14mm,
+  bottom=14mm
+}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{qrcode}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.04}
+
+% Custom vector icons matching FlowCV
+\newcommand{\iconEnvelope}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \draw[line width=0.55pt, rounded corners=0.4pt, fill=black] (0,0) rectangle (12,8.2);
+  \draw[line width=0.5pt, color=white] (0.8,7.5) -- (6,3.5) -- (11.2,7.5);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconPhone}{%
+\begin{tikzpicture}[x=0.065em, y=0.065em, baseline=-0.22em]
+  \draw[line width=1.0pt, line cap=round, line join=round, fill=black] 
+    (2,8.5) .. controls (1.5,9.5) and (3,10.5) .. (4.2,10.2)
+    -- (5.3,8.5) .. controls (5.6,8) and (5.2,7.3) .. (4.6,7.1)
+    -- (4.1,7) .. controls (4.4,5.4) and (5.4,4.4) .. (7,4.1)
+    -- (7.1,4.6) .. controls (7.3,5.2) and (8,5.6) .. (8.5,5.3)
+    -- (10.2,4.2) .. controls (10.5,3) and (9.5,1.5) .. (8.5,2)
+    .. controls (5,2) and (2,5) .. (2,8.5) -- cycle;
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLocation}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \path[fill=black] (5,10) .. controls (2.2,10) and (0,7.8) .. (0,5)
+    .. controls (0,1.8) and (5,-2) .. (5,-2)
+    .. controls (5,-2) and (10,1.8) .. (10,5)
+    .. controls (10,7.8) and (7.8,10) .. (5,10) -- cycle;
+  \fill[white] (5,5.2) circle (1.8);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLinkedIn}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \fill[black, rounded corners=1.2pt] (0,0) rectangle (11,11);
+  \fill[white] (2.2,2.2) rectangle (4.2,7.2);
+  \fill[white] (3.2,9.2) circle (1.1);
+  \fill[white] (5.5,2.2) rectangle (7.5,7.2);
+  \fill[white] (5.5,5.5) arc (180:0:1.7) -- (8.9,2.2) -- (7.5,2.2) -- (7.5,5.2) arc (0:180:0.7) -- (6.1,2.2) -- cycle;
+\end{tikzpicture}%
+}
+
+% Section Header matching FlowCV: Bold uppercase title + thin full-width line
+\newcommand{\cvSection}[1]{%
+  \vspace{6.5pt}%
+  {\fontsize{10.5}{12}\selectfont \textbf{#1}}\par\vspace{1.5pt}%
+  \rule{\textwidth}{0.75pt}\par\vspace{4.5pt}%
+}
+
+% Item for Education / Experience matching FlowCV two-column row
+\newcommand{\cvItem}[4]{%
+  \noindent
+  \parbox[t]{0.75\textwidth}{\raggedright \textbf{#1}}\hfill
+  \parbox[t]{0.24\textwidth}{\raggedleft \fontsize{8.5}{10.5}\selectfont #2}\par
+  \vspace{1.5pt}
+  \noindent
+  \parbox[t]{0.75\textwidth}{\fontsize{8.7}{11.2}\selectfont #4}\hfill
+  \parbox[t]{0.24\textwidth}{\raggedleft \fontsize{8.5}{10.5}\selectfont #3}\par
+  \vspace{5pt}
+}
+\begin{document}
+
+\noindent
+\begin{minipage}[c]{0.81\textwidth}
+  {\fontsize{20}{24}\selectfont \textbf{THEODORE HESLING}}\\[3pt]
+  {\fontsize{9.6}{11.8}\selectfont \textit{Engineering student seeking a 4-to-5-month internship in Embedded Systems, Robotics \& Smart Sensors}}\\[5pt]
+  {\fontsize{8.5}{10}\selectfont 
+    \iconEnvelope~theodore200531@outlook.com \quad
+    \iconPhone~0675493372 \quad
+    \iconLocation~Gardanne 13120, France\\[2pt]
+    \iconLinkedIn~\href{https://www.linkedin.com/in/théodore-hesling-a08316386}{linkedin.com/in/théodore-hesling-a08316386}
+  }
+\end{minipage}\hfill
+\begin{minipage}[c]{0.17\textwidth}
+  \centering
+  \qrcode[height=18mm]{https://www.linkedin.com/in/th%C3%A9odore-hesling-a08316386}\\[2pt]
+  {\fontsize{7}{8.5}\selectfont \textbf{LinkedIn Profile}}
+\end{minipage}
+\vspace{3pt}
+
+% PROFILE
+\cvSection{PROFILE}
+{\fontsize{8.8}{11.5}\selectfont Systems Engineering candidate at Mines Saint-Étienne (ISMIN) specializing in embedded architectures, autonomous robotics, and sensor physics. Proven track record in prototyping complex mechatronic systems, bare-metal C programming on ARM Cortex-M, and designing custom capacitive sensors. Motivated to contribute to Swiss robotics, medical instrumentation, and precision industrial automation. EU citizen eligible for simplified Swiss L/B work permits.\par}
+
+% EDUCATION
+\cvSection{EDUCATION}
+\cvItem{Engineer Degree (M.Sc) - Mines de Saint Etienne}{09/2025 -- 07/2028}{Gardanne}{Engineering Degree candidate at Mines Saint-Étienne (ISMIN cycle). Specialization in Embedded Systems and Autonomous Mechatronics. Core coursework: Microcontroller Architectures (STM32), Real-Time Operating Systems (FreeRTOS), Sensor Acquisition \& Signal Processing, Feedback Control (PID), and 3D CAD.}
+
+\cvItem{CPGE PC - Lycée Jeanne d'Albret}{09/2023 -- 07/2025}{SAINT GERMAIN EN LAYE}{Intensive two-year undergraduate program in Advanced Physics, Chemistry, and Mathematics preparing for competitive nationwide entrance exams to French Engineering Grandes Écoles.}
+
+% EXPERIENCE
+\cvSection{EXPERIENCE}
+\cvItem{Autonomous Boat Prototype (Self-Levelling) - Mines Saint-Étienne}{10/2025 -- 03/2026}{Gardanne}{Engineered a self-levelling catamaran using STM32 bare-metal C. Developed custom differential capacitive liquid level sensors measuring water-column dielectric variation ($\Delta\epsilon_r$), processed via ADC into a real-time PID stabilization loop driving ballast servomotors. Modelled mechanical chassis in Autodesk Inventor.}
+
+\cvItem{Treasurer - Junior Mines Provence}{01/2026 -- 07/2026}{Gardanne}{Managing financial operations and budget allocations for engineering projects, tracking procurement for technical prototyping, and ensuring strict compliance with CNJE audit guidelines.}
+
+\cvItem{Cybersecurity Platform Architect Intern - Valeo}{01/2026 -- 02/2026}{Créteil}{Analyzed embedded bus communications (CAN/LIN) and evaluated real-time sensor data integrity in safety-critical electronic control units.}
+
+\cvItem{Observation Internship - BNP Paribas CIB}{04/2021 -- 04/2021}{Shanghai}{Observed mission-critical automated infrastructure, fault-tolerant system monitoring, and low-latency data telemetry in a global financial institution.}
+
+% SKILLS
+\cvSection{SKILLS}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \textbf{Embedded Software} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (C, Bare-metal STM32, ARM Cortex-M, FreeRTOS, HAL)} &
+  \textbf{Sensor Design \& Physics} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (Capacitive Sensing, Dielectric $\Delta\epsilon_r$, Signal Conditioning)} \\[4.5pt]
+  
+  \textbf{Control Systems \& CAD} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (PID Closed-Loop, Autodesk Inventor, Prototyping)} &
+  \textbf{Hardware Interfaces} \newline
+  {\fontsize{8.5}{10.5}\selectfont Experienced (ADC, PWM, Timers, SPI, I2C, UART, CAN Bus)} \\[4.5pt]
+  
+  \textbf{Python \& Data Processing} \newline
+  {\fontsize{8.5}{10.5}\selectfont Experienced (Python, NumPy, Matplotlib, Data Acquisition)} &
+  \textbf{Lab Equipment \& Tooling} \newline
+  {\fontsize{8.5}{10.5}\selectfont Intermediate (Oscilloscopes, Logic Analyzers, Multimeters, Soldering, Git)}
+\end{tabularx}
+
+% LANGUAGES
+\cvSection{LANGUAGES}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \textbf{French} \newline
+  {\fontsize{8.5}{10.5}\selectfont Native speaker} &
+  \textbf{English} \newline
+  {\fontsize{8.5}{10.5}\selectfont C2 -- Bilingual (IGCSE \& A-Levels)} \\[4.5pt]
+  
+  \textbf{Spanish} \newline
+  {\fontsize{8.5}{10.5}\selectfont C1 -- Fluent (DELE Diploma)} &
+  \textbf{Chinese (Mandarin)} \newline
+  {\fontsize{8.5}{10.5}\selectfont C1 -- Fluent (HSK 3)} \\[4.5pt]
+  
+  \textbf{German} \newline
+  {\fontsize{8.5}{10.5}\selectfont Elementary (A1/A2, self-study with Nicos Weg)} &
+  \textbf{Swiss Work Authorization} \newline
+  {\fontsize{8.5}{10.5}\selectfont French / EU Citizen (Fast-track L/B Permit)}
+\end{tabularx}
+
+\end{document}

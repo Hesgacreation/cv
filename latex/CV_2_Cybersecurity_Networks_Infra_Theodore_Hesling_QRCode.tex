@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=18mm,
+  right=18mm,
+  top=14mm,
+  bottom=14mm
+}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{qrcode}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.04}
+
+% Custom vector icons matching FlowCV
+\newcommand{\iconEnvelope}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \draw[line width=0.55pt, rounded corners=0.4pt, fill=black] (0,0) rectangle (12,8.2);
+  \draw[line width=0.5pt, color=white] (0.8,7.5) -- (6,3.5) -- (11.2,7.5);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconPhone}{%
+\begin{tikzpicture}[x=0.065em, y=0.065em, baseline=-0.22em]
+  \draw[line width=1.0pt, line cap=round, line join=round, fill=black] 
+    (2,8.5) .. controls (1.5,9.5) and (3,10.5) .. (4.2,10.2)
+    -- (5.3,8.5) .. controls (5.6,8) and (5.2,7.3) .. (4.6,7.1)
+    -- (4.1,7) .. controls (4.4,5.4) and (5.4,4.4) .. (7,4.1)
+    -- (7.1,4.6) .. controls (7.3,5.2) and (8,5.6) .. (8.5,5.3)
+    -- (10.2,4.2) .. controls (10.5,3) and (9.5,1.5) .. (8.5,2)
+    .. controls (5,2) and (2,5) .. (2,8.5) -- cycle;
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLocation}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \path[fill=black] (5,10) .. controls (2.2,10) and (0,7.8) .. (0,5)
+    .. controls (0,1.8) and (5,-2) .. (5,-2)
+    .. controls (5,-2) and (10,1.8) .. (10,5)
+    .. controls (10,7.8) and (7.8,10) .. (5,10) -- cycle;
+  \fill[white] (5,5.2) circle (1.8);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLinkedIn}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \fill[black, rounded corners=1.2pt] (0,0) rectangle (11,11);
+  \fill[white] (2.2,2.2) rectangle (4.2,7.2);
+  \fill[white] (3.2,9.2) circle (1.1);
+  \fill[white] (5.5,2.2) rectangle (7.5,7.2);
+  \fill[white] (5.5,5.5) arc (180:0:1.7) -- (8.9,2.2) -- (7.5,2.2) -- (7.5,5.2) arc (0:180:0.7) -- (6.1,2.2) -- cycle;
+\end{tikzpicture}%
+}
+
+% Section Header matching FlowCV: Bold uppercase title + thin full-width line
+\newcommand{\cvSection}[1]{%
+  \vspace{6.5pt}%
+  {\fontsize{10.5}{12}\selectfont \textbf{#1}}\par\vspace{1.5pt}%
+  \rule{\textwidth}{0.75pt}\par\vspace{4.5pt}%
+}
+
+% Item for Education / Experience matching FlowCV two-column row
+\newcommand{\cvItem}[4]{%
+  \noindent
+  \parbox[t]{0.75\textwidth}{\raggedright \textbf{#1}}\hfill
+  \parbox[t]{0.24\textwidth}{\raggedleft \fontsize{8.5}{10.5}\selectfont #2}\par
+  \vspace{1.5pt}
+  \noindent
+  \parbox[t]{0.75\textwidth}{\fontsize{8.7}{11.2}\selectfont #4}\hfill
+  \parbox[t]{0.24\textwidth}{\raggedleft \fontsize{8.5}{10.5}\selectfont #3}\par
+  \vspace{5pt}
+}
+\begin{document}
+
+\noindent
+\begin{minipage}[c]{0.81\textwidth}
+  {\fontsize{20}{24}\selectfont \textbf{THEODORE HESLING}}\\[3pt]
+  {\fontsize{9.6}{11.8}\selectfont \textit{Engineering student seeking a 4-to-5-month internship in Cybersecurity, Networks \& Infrastructure}}\\[5pt]
+  {\fontsize{8.5}{10}\selectfont 
+    \iconEnvelope~theodore200531@outlook.com \quad
+    \iconPhone~0675493372 \quad
+    \iconLocation~Gardanne 13120, France\\[2pt]
+    \iconLinkedIn~\href{https://www.linkedin.com/in/théodore-hesling-a08316386}{linkedin.com/in/théodore-hesling-a08316386}
+  }
+\end{minipage}\hfill
+\begin{minipage}[c]{0.17\textwidth}
+  \centering
+  \qrcode[height=18mm]{https://www.linkedin.com/in/th%C3%A9odore-hesling-a08316386}\\[2pt]
+  {\fontsize{7}{8.5}\selectfont \textbf{LinkedIn Profile}}
+\end{minipage}
+\vspace{3pt}
+
+% PROFILE
+\cvSection{PROFILE}
+{\fontsize{8.8}{11.5}\selectfont Cybersecurity-focused Engineering candidate at Mines Saint-Étienne (ISMIN) with hands-on experience in securing automotive architectures at Valeo and financial infrastructure exposure at BNP Paribas CIB. Combining deep expertise in OpenSSL, network security protocols, system hardening, and automation with multilingual fluency. Motivated to safeguard critical Swiss enterprise, financial, and cloud environments. EU citizen eligible for simplified Swiss L/B work permits.\par}
+
+% EDUCATION
+\cvSection{EDUCATION}
+\cvItem{Engineer Degree (M.Sc) - Mines de Saint Etienne}{09/2025 -- 07/2028}{Gardanne}{Engineering Degree candidate at Mines Saint-Étienne (ISMIN cycle). Specialization in Computer Science, Distributed Systems, and Cybersecurity. Core coursework: Network Security, Applied Cryptography, Linux Kernel \& OS Security, Cloud Infrastructure, and Threat Modeling.}
+
+\cvItem{CPGE PC - Lycée Jeanne d'Albret}{09/2023 -- 07/2025}{SAINT GERMAIN EN LAYE}{Intensive two-year undergraduate program in Advanced Physics, Chemistry, and Mathematics preparing for competitive nationwide entrance exams to French Engineering Grandes Écoles.}
+
+% EXPERIENCE
+\cvSection{EXPERIENCE}
+\cvItem{Treasurer - Junior Mines Provence}{01/2026 -- 07/2026}{Gardanne}{Overseeing treasury and fiscal governance for the student engineering consulting firm, enforcing budgetary compliance, internal risk controls, and passing national audits conducted by the CNJE.}
+
+\cvItem{Cybersecurity Platform Architect Intern - Valeo}{01/2026 -- 02/2026}{Créteil}{Conducted cybersecurity threat analysis, vulnerability assessments, and risk remediation on vehicle software platforms. Audited cryptographic key management and secure diagnostic communication channels against UNECE R155/156 standards.}
+
+\cvItem{Secure IoT Telemetry Infrastructure - Mines Saint-Étienne}{10/2025 -- 03/2026}{Gardanne}{Implemented an end-to-end authenticated IoT data pipeline utilizing OpenSSL for TLS/DTLS mutual authentication, symmetric stream encryption, and cryptographic integrity verification on connected sensor nodes.}
+
+\cvItem{Observation Internship - BNP Paribas CIB}{04/2021 -- 04/2021}{Shanghai}{Immersed in the digital infrastructure of a high-frequency trading floor, studying low-latency network topologies, disaster recovery configurations, and cybersecurity defense-in-depth measures.}
+
+% SKILLS
+\cvSection{SKILLS}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \textbf{Cybersecurity \& Cryptography} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (OpenSSL, TLS/SSL, PKI, AES/RSA/ECC, Threat Analysis)} &
+  \textbf{System Security \& Networks} \newline
+  {\fontsize{8.5}{10.5}\selectfont Experienced (TCP/IP, Wireshark, Linux Hardening, Firewalls, SSH)} \\[4.5pt]
+  
+  \textbf{Python \& Automation} \newline
+  {\fontsize{8.5}{10.5}\selectfont Experienced (Python Scripting, Bash, Google Apps Script, APIs)} &
+  \textbf{Low-Level Systems} \newline
+  {\fontsize{8.5}{10.5}\selectfont Intermediate (C, Memory Safety, Reverse Engineering Basics)} \\[4.5pt]
+  
+  \textbf{Cloud \& DevOps Basics} \newline
+  {\fontsize{8.5}{10.5}\selectfont Intermediate (Docker, Linux Administration, Git, CI/CD)} &
+  \textbf{Compliance \& Risk} \newline
+  {\fontsize{8.5}{10.5}\selectfont Intermediate (ISO 27001, UNECE R155, Risk Assessment)}
+\end{tabularx}
+
+% LANGUAGES
+\cvSection{LANGUAGES}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \textbf{French} \newline
+  {\fontsize{8.5}{10.5}\selectfont Native speaker} &
+  \textbf{English} \newline
+  {\fontsize{8.5}{10.5}\selectfont C2 -- Bilingual (IGCSE \& A-Levels)} \\[4.5pt]
+  
+  \textbf{Spanish} \newline
+  {\fontsize{8.5}{10.5}\selectfont C1 -- Fluent (DELE Diploma)} &
+  \textbf{Chinese (Mandarin)} \newline
+  {\fontsize{8.5}{10.5}\selectfont C1 -- Fluent (HSK 3)} \\[4.5pt]
+  
+  \textbf{German} \newline
+  {\fontsize{8.5}{10.5}\selectfont Elementary (A1/A2, self-study with Nicos Weg)} &
+  \textbf{Swiss Work Authorization} \newline
+  {\fontsize{8.5}{10.5}\selectfont French / EU Citizen (Fast-track L/B Permit)}
+\end{tabularx}
+
+\end{document}

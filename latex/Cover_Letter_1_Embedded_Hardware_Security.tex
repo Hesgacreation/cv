@@ -1,0 +1,106 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,
+  right=20mm,
+  top=18mm,
+  bottom=18mm
+}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\linespread{1.12}
+
+% Custom vector icons matching FlowCV
+\newcommand{\iconEnvelope}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \draw[line width=0.55pt, rounded corners=0.4pt, fill=black] (0,0) rectangle (12,8.2);
+  \draw[line width=0.5pt, color=white] (0.8,7.5) -- (6,3.5) -- (11.2,7.5);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconPhone}{%
+\begin{tikzpicture}[x=0.065em, y=0.065em, baseline=-0.22em]
+  \draw[line width=1.0pt, line cap=round, line join=round, fill=black] 
+    (2,8.5) .. controls (1.5,9.5) and (3,10.5) .. (4.2,10.2)
+    -- (5.3,8.5) .. controls (5.6,8) and (5.2,7.3) .. (4.6,7.1)
+    -- (4.1,7) .. controls (4.4,5.4) and (5.4,4.4) .. (7,4.1)
+    -- (7.1,4.6) .. controls (7.3,5.2) and (8,5.6) .. (8.5,5.3)
+    -- (10.2,4.2) .. controls (10.5,3) and (9.5,1.5) .. (8.5,2)
+    .. controls (5,2) and (2,5) .. (2,8.5) -- cycle;
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLocation}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \path[fill=black] (5,10) .. controls (2.2,10) and (0,7.8) .. (0,5)
+    .. controls (0,1.8) and (5,-2) .. (5,-2)
+    .. controls (5,-2) and (10,1.8) .. (10,5)
+    .. controls (10,7.8) and (7.8,10) .. (5,10) -- cycle;
+  \fill[white] (5,5.2) circle (1.8);
+\end{tikzpicture}%
+}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+  {\fontsize{20}{24}\selectfont \textbf{THÉODORE HESLING}}\\[4pt]
+  {\fontsize{9}{11}\selectfont 
+    \iconEnvelope~theodore200531@outlook.com \quad
+    \iconPhone~+33 6 75 49 33 72 \quad
+    \iconLocation~Gardanne / Aix-en-Provence, France
+  }\\[3pt]
+  {\fontsize{8.5}{10.5}\selectfont \textit{Nationality: French (EU Citizen -- Eligible for Swiss Work Permit B/L without quota delay)}}\par
+  \vspace{4pt}
+  \rule{\textwidth}{0.8pt}
+\end{center}
+\vspace{2pt}
+
+% RECIPIENT & DATE
+\noindent
+\begin{minipage}[t]{0.65\textwidth}
+  \textbf{To:} The Engineering Recruitment Team\\
+  \textbf{Company:} [Target Company, e.g., Kudelski Group / STMicroelectronics / SICPA]\\
+  \textbf{Location:} Vaud / Geneva / Neuchâtel, Switzerland
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \raggedleft
+  \textbf{Date:} [Date of Application]
+\end{minipage}
+
+\vspace{10pt}
+\noindent \textbf{Subject: Application for Embedded Security Engineering Intern (4 to 5 Months -- from April 2027)}\par
+\vspace{4pt}
+
+Dear Hiring Team,
+
+I am writing to express my strong enthusiasm for joining \textbf{[Company Name]} as an intern in your engineering division. Currently in my second year of the Master of Science in Engineering at \textbf{Mines Saint-Étienne (ISMIN)}, I have focused my studies on the synergy between microcontroller architectures, low-level software, and robust hardware security.
+
+During my cybersecurity internship at \textbf{Valeo}, I evaluated attack surfaces across electronic control units (ECUs) and analyzed secure communication protocols against automotive security standards. In parallel, my academic engineering projects have grounded my skills in physical hardware: I designed an autonomous self-levelling vessel driven by an \textbf{STM32 (ARM Cortex-M)} running bare-metal C to execute real-time closed-loop PID control over \textbf{custom-built differential capacitive water-level sensors} measuring liquid permittivity variations. Furthermore, my current coursework and projects incorporate \textbf{OpenSSL cryptographic primitives}, secure boot architectures, and mutual authentication to safeguard embedded endpoints.
+
+Switzerland represents the pinnacle of precision, technological rigor, and innovation. \textbf{[Company Name]}'s leadership in hardware-rooted trust, secure silicon, and resilient embedded architectures makes your team the ideal environment where I wish to contribute my technical foundation, curiosity, and high standards of execution.
+
+In addition to technical competence, I bring an adaptable and multicultural perspective: native French, bilingual English (C2 -- IGCSE \& A-Levels), certified Spanish (C1), certified Chinese (C1 -- HSK 3), and ongoing self-directed study of German (\textit{Nicos Weg}). My service as Treasurer of Junior Mines Provence cultivated acute accountability, financial governance, and strict compliance with national quality audits. Holding French/EU citizenship ensures a straightforward, quota-free Swiss B/L work authorization process.
+
+Available starting \textbf{April 2027 for a duration of 4 to 5 months} (fully fulfilling the 16-week French CTI accreditation requirement), I would welcome the opportunity to discuss how my proactive mindset and skills can support \textbf{[Company Name]}'s ongoing projects. Thank you for your time and consideration.
+
+\vspace{14pt}
+\noindent Sincerely,\\[18pt]
+\textbf{Théodore Hesling}\\[2pt]
+{\small MSc Engineering Student -- Mines Saint-Étienne (ISMIN)\\
+theodore200531@outlook.com \quad +33 6 75 49 33 72}
+
+\end{document}

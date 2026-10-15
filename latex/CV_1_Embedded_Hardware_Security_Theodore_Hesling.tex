@@ -1,0 +1,157 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=18mm,
+  right=18mm,
+  top=14mm,
+  bottom=14mm
+}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage{qrcode}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.04}
+
+% Custom vector icons matching FlowCV
+\newcommand{\iconEnvelope}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \draw[line width=0.55pt, rounded corners=0.4pt, fill=black] (0,0) rectangle (12,8.2);
+  \draw[line width=0.5pt, color=white] (0.8,7.5) -- (6,3.5) -- (11.2,7.5);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconPhone}{%
+\begin{tikzpicture}[x=0.065em, y=0.065em, baseline=-0.22em]
+  \draw[line width=1.0pt, line cap=round, line join=round, fill=black] 
+    (2,8.5) .. controls (1.5,9.5) and (3,10.5) .. (4.2,10.2)
+    -- (5.3,8.5) .. controls (5.6,8) and (5.2,7.3) .. (4.6,7.1)
+    -- (4.1,7) .. controls (4.4,5.4) and (5.4,4.4) .. (7,4.1)
+    -- (7.1,4.6) .. controls (7.3,5.2) and (8,5.6) .. (8.5,5.3)
+    -- (10.2,4.2) .. controls (10.5,3) and (9.5,1.5) .. (8.5,2)
+    .. controls (5,2) and (2,5) .. (2,8.5) -- cycle;
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLocation}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \path[fill=black] (5,10) .. controls (2.2,10) and (0,7.8) .. (0,5)
+    .. controls (0,1.8) and (5,-2) .. (5,-2)
+    .. controls (5,-2) and (10,1.8) .. (10,5)
+    .. controls (10,7.8) and (7.8,10) .. (5,10) -- cycle;
+  \fill[white] (5,5.2) circle (1.8);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLinkedIn}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \fill[black, rounded corners=1.2pt] (0,0) rectangle (11,11);
+  \fill[white] (2.2,2.2) rectangle (4.2,7.2);
+  \fill[white] (3.2,9.2) circle (1.1);
+  \fill[white] (5.5,2.2) rectangle (7.5,7.2);
+  \fill[white] (5.5,5.5) arc (180:0:1.7) -- (8.9,2.2) -- (7.5,2.2) -- (7.5,5.2) arc (0:180:0.7) -- (6.1,2.2) -- cycle;
+\end{tikzpicture}%
+}
+
+% Section Header matching FlowCV: Bold uppercase title + thin full-width line
+\newcommand{\cvSection}[1]{%
+  \vspace{6.5pt}%
+  {\fontsize{10.5}{12}\selectfont \textbf{#1}}\par\vspace{1.5pt}%
+  \rule{\textwidth}{0.75pt}\par\vspace{4.5pt}%
+}
+
+% Item for Education / Experience matching FlowCV two-column row
+\newcommand{\cvItem}[4]{%
+  \noindent
+  \parbox[t]{0.75\textwidth}{\raggedright \textbf{#1}}\hfill
+  \parbox[t]{0.24\textwidth}{\raggedleft \fontsize{8.5}{10.5}\selectfont #2}\par
+  \vspace{1.5pt}
+  \noindent
+  \parbox[t]{0.75\textwidth}{\fontsize{8.7}{11.2}\selectfont #4}\hfill
+  \parbox[t]{0.24\textwidth}{\raggedleft \fontsize{8.5}{10.5}\selectfont #3}\par
+  \vspace{5pt}
+}
+\begin{document}
+
+\begin{center}
+  {\fontsize{20}{24}\selectfont \textbf{THEODORE HESLING}}\\[3pt]
+  {\fontsize{10}{12}\selectfont \textit{Engineering student seeking a 4-to-5-month internship in Embedded Systems \& Hardware Security}}\\[5pt]
+  {\fontsize{8.5}{10}\selectfont 
+    \iconEnvelope~theodore200531@outlook.com \quad
+    \iconPhone~0675493372 \quad
+    \iconLocation~Gardanne 13120, France
+  }
+\end{center}
+\vspace{-4pt}
+
+% PROFILE
+\cvSection{PROFILE}
+{\fontsize{8.8}{11.5}\selectfont Cybersecurity and Embedded Systems Engineering candidate at Mines Saint-Étienne (ISMIN), combining hands-on practice in hardware security at Valeo and financial infrastructure exposure at BNP Paribas. Proficient in bare-metal C (STM32), applied cryptography, and hardware design. Motivated to contribute to Swiss innovation in embedded hardware security, IoT platforms, and secure firmware development. EU citizen eligible for simplified Swiss L/B work permits.\par}
+
+% EDUCATION
+\cvSection{EDUCATION}
+\cvItem{Engineer Degree (M.Sc) - Mines de Saint Etienne}{09/2025 -- 07/2028}{Gardanne}{Engineering Degree candidate at Mines Saint-Étienne (ISMIN cycle). Double specialization in Microelectronics and Embedded Systems. Core coursework: Hardware Security, Cryptography (AES, RSA, ECC), Microcontroller Architectures (ARM Cortex-M), RTOS, VHDL/SystemVerilog, and IoT Networks.}
+
+\cvItem{CPGE PC - Lycée Jeanne d'Albret}{09/2023 -- 07/2025}{SAINT GERMAIN EN LAYE}{Intensive two-year undergraduate program in Advanced Physics, Chemistry, and Mathematics preparing for competitive nationwide entrance exams to French Engineering Grandes Écoles.}
+
+% EXPERIENCE
+\cvSection{EXPERIENCE}
+\cvItem{Treasurer - Junior Mines Provence}{01/2026 -- 07/2026}{Gardanne}{Managing the student engineering consulting firm's financial operations, overseeing budgets, financial reporting, and ensuring rigorous tax compliance and national CNJE audit standards.}
+
+\cvItem{Cybersecurity Platform Architect Intern - Valeo}{01/2026 -- 02/2026}{Créteil}{Conducted risk assessments and evaluated secure communication protocols for connected automotive architectures. Investigated threat models and hardware-assisted cryptographic primitives to prevent unauthorized firmware modification.}
+
+\cvItem{Autonomous Boat Prototype (Self-Levelling) - Mines Saint-Étienne}{10/2025 -- 03/2026}{Gardanne}{Engineered a closed-loop trim-stabilized boat using STM32 bare-metal C. Designed custom differential capacitive liquid level sensors measuring water-column permittivity shifts, interfaced via ADC to a real-time PID controller driving ballast servomotors. Modelled hull in Autodesk Inventor.}
+
+\cvItem{Observation Internship - BNP Paribas CIB}{04/2021 -- 04/2021}{Shanghai}{Gained early exposure to the mission-critical digital infrastructure of a global trading floor, observing network resilience protocols, operational security constraints, and data integrity safeguards.}
+
+% SKILLS
+\cvSection{SKILLS}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \textbf{C / Embedded C} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (STM32, ARM Cortex-M, Bare-metal, FreeRTOS)} &
+  \textbf{Hardware Security \& Cryptography} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (AES, ECC, SHA, OpenSSL, Secure Boot)} \\[4.5pt]
+  
+  \textbf{Python} \newline
+  {\fontsize{8.5}{10.5}\selectfont Experienced (Automation, Scripting, NumPy)} &
+  \textbf{CAD \& Prototyping} \newline
+  {\fontsize{8.5}{10.5}\selectfont Skillful (Autodesk Inventor, PCB Prototyping)} \\[4.5pt]
+  
+  \textbf{Hardware Description} \newline
+  {\fontsize{8.5}{10.5}\selectfont Intermediate (SystemVerilog, VHDL, FPGA)} &
+  \textbf{Protocols \& Tooling} \newline
+  {\fontsize{8.5}{10.5}\selectfont Intermediate (SPI, I2C, UART, CAN, Git, Linux, GDB)}
+\end{tabularx}
+
+% LANGUAGES
+\cvSection{LANGUAGES}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \textbf{French} \newline
+  {\fontsize{8.5}{10.5}\selectfont Native speaker} &
+  \textbf{English} \newline
+  {\fontsize{8.5}{10.5}\selectfont C2 -- Bilingual (IGCSE \& A-Levels)} \\[4.5pt]
+  
+  \textbf{Spanish} \newline
+  {\fontsize{8.5}{10.5}\selectfont C1 -- Fluent (DELE Diploma)} &
+  \textbf{Chinese (Mandarin)} \newline
+  {\fontsize{8.5}{10.5}\selectfont C1 -- Fluent (HSK 3)} \\[4.5pt]
+  
+  \textbf{German} \newline
+  {\fontsize{8.5}{10.5}\selectfont Elementary (A1/A2, self-study with Nicos Weg)} &
+  \textbf{Swiss Work Authorization} \newline
+  {\fontsize{8.5}{10.5}\selectfont French / EU Citizen (Fast-track L/B Permit)}
+\end{tabularx}
+
+\end{document}

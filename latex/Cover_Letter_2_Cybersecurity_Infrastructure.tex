@@ -1,0 +1,106 @@
+\documentclass[10.5pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=20mm,
+  right=20mm,
+  top=18mm,
+  bottom=18mm
+}
+\usepackage{tikz}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt}
+\linespread{1.12}
+
+% Custom vector icons matching FlowCV
+\newcommand{\iconEnvelope}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \draw[line width=0.55pt, rounded corners=0.4pt, fill=black] (0,0) rectangle (12,8.2);
+  \draw[line width=0.5pt, color=white] (0.8,7.5) -- (6,3.5) -- (11.2,7.5);
+\end{tikzpicture}%
+}
+
+\newcommand{\iconPhone}{%
+\begin{tikzpicture}[x=0.065em, y=0.065em, baseline=-0.22em]
+  \draw[line width=1.0pt, line cap=round, line join=round, fill=black] 
+    (2,8.5) .. controls (1.5,9.5) and (3,10.5) .. (4.2,10.2)
+    -- (5.3,8.5) .. controls (5.6,8) and (5.2,7.3) .. (4.6,7.1)
+    -- (4.1,7) .. controls (4.4,5.4) and (5.4,4.4) .. (7,4.1)
+    -- (7.1,4.6) .. controls (7.3,5.2) and (8,5.6) .. (8.5,5.3)
+    -- (10.2,4.2) .. controls (10.5,3) and (9.5,1.5) .. (8.5,2)
+    .. controls (5,2) and (2,5) .. (2,8.5) -- cycle;
+\end{tikzpicture}%
+}
+
+\newcommand{\iconLocation}{%
+\begin{tikzpicture}[x=0.075em, y=0.075em, baseline=-0.22em]
+  \path[fill=black] (5,10) .. controls (2.2,10) and (0,7.8) .. (0,5)
+    .. controls (0,1.8) and (5,-2) .. (5,-2)
+    .. controls (5,-2) and (10,1.8) .. (10,5)
+    .. controls (10,7.8) and (7.8,10) .. (5,10) -- cycle;
+  \fill[white] (5,5.2) circle (1.8);
+\end{tikzpicture}%
+}
+
+\begin{document}
+
+% HEADER
+\begin{center}
+  {\fontsize{20}{24}\selectfont \textbf{THÉODORE HESLING}}\\[4pt]
+  {\fontsize{9}{11}\selectfont 
+    \iconEnvelope~theodore200531@outlook.com \quad
+    \iconPhone~+33 6 75 49 33 72 \quad
+    \iconLocation~Gardanne / Aix-en-Provence, France
+  }\\[3pt]
+  {\fontsize{8.5}{10.5}\selectfont \textit{Nationality: French (EU Citizen -- Eligible for Swiss Work Permit B/L without quota delay)}}\par
+  \vspace{4pt}
+  \rule{\textwidth}{0.8pt}
+\end{center}
+\vspace{2pt}
+
+% RECIPIENT & DATE
+\noindent
+\begin{minipage}[t]{0.65\textwidth}
+  \textbf{To:} The Information Security \& Infrastructure Recruitment Team\\
+  \textbf{Company:} [Target Company, e.g., Proton / ELCA / Kudelski Security / Swisscom]\\
+  \textbf{Location:} Geneva / Lausanne / Vaud, Switzerland
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\textwidth}
+  \raggedleft
+  \textbf{Date:} [Date of Application]
+\end{minipage}
+
+\vspace{10pt}
+\noindent \textbf{Subject: Application for Cybersecurity \& Cloud Infrastructure Intern (4 to 5 Months -- from April 2027)}\par
+\vspace{4pt}
+
+Dear Hiring Team,
+
+I am writing to express my eager interest in joining \textbf{[Company Name]}'s cybersecurity and digital trust engineering division. Currently enrolled in the second year of the Master of Science in Engineering at \textbf{Mines Saint-Étienne (ISMIN)}, I have developed a strong specialization in computer systems security, applied cryptography, and network resilience.
+
+My professional experience at \textbf{Valeo} immersed me in cybersecurity risk analysis, threat modeling, and protocol auditing, where I identified vulnerability vectors and evaluated mitigation strategies against international regulations. This experience was further informed by early observation of the high-security infrastructure of \textbf{BNP Paribas CIB}'s global trading floor in Shanghai, exposing me to high-availability network topologies and zero-trust paradigms. In my engineering curriculum, I engineered an end-to-end secure IoT telemetry pipeline using \textbf{OpenSSL} for mutual TLS authentication and cryptographic message integrity.
+
+Switzerland is recognized worldwide as a premier hub for data privacy, cryptographic excellence, and secure infrastructure. \textbf{[Company Name]}'s unwavering commitment to privacy, sovereignty, and state-of-the-art defense makes your engineering team the benchmark for my professional aspirations.
+
+Beyond technical expertise, I offer an international background and versatile communication skills: native French, bilingual English (C2 -- Cambridge/IGCSE), certified Spanish (C1), certified Chinese (C1 -- HSK 3), and actively progressing in German (\textit{Nicos Weg}). Serving as Treasurer of Junior Mines Provence honed my discipline in regulatory audits, budget control, and organizational risk management. As an EU citizen, I benefit from simplified, quota-exempt Swiss B/L work authorization.
+
+Available starting \textbf{April 2027 for a duration of 4 to 5 months} (minimum 16 weeks to validate my French CTI degree requirements), I am eager to contribute my energy, rigor, and technical dedication to \textbf{[Company Name]}'s mission. Thank you for considering my application.
+
+\vspace{14pt}
+\noindent Sincerely,\\[18pt]
+\textbf{Théodore Hesling}\\[2pt]
+{\small MSc Engineering Student -- Mines Saint-Étienne (ISMIN)\\
+theodore200531@outlook.com \quad +33 6 75 49 33 72}
+
+\end{document}
